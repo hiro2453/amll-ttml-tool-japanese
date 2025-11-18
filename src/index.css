@@ -1,5 +1,5 @@
 :root {
-	font-family: "MiSans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,Apple Color Emoji,SF Pro,Hiragino Sans,SF Pro Icons,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,メイリオ,Meiryo,ＭＳ Ｐゴシック,Helvetica Neue,Helvetica,Arial,sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -14,7 +14,7 @@
 
 .radix-themes {
 	--default-font-family:
-		"MiSans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+		-apple-system,BlinkMacSystemFont,Apple Color Emoji,SF Pro,Hiragino Sans,SF Pro Icons,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,メイリオ,Meiryo,ＭＳ Ｐゴシック,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 ::-webkit-scrollbar-track {
