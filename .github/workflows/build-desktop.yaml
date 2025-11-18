@@ -60,6 +60,8 @@ jobs:
         run: rustup target add wasm32-unknown-unknown
       - name: 安装前端依赖
         run: pnpm i
+      - name: 构建前端
+        run: pnpm build
       - name: 构建 AMLL TTML Tools 程序并发布自动构建
         uses: tauri-apps/tauri-action@v0.5.15
         with:
