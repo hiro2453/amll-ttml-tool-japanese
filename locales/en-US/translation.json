@@ -27,7 +27,7 @@
 				"completed": "Tokenization complete!",
 				"error": "Tokenization failed, please check console errors!"
 			},
-			"file": "File",
+			"file": "test",
 			"newLyric": "New lyrics",
 			"openLyric": "Open lyrics",
 			"saveLyric": "Save lyrics",
