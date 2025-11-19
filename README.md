@@ -12,13 +12,14 @@
 <img width="1312" alt="image" src="https://github.com/user-attachments/assets/3d4a542a-2232-4d9d-a236-ea009fff6496">
 <img width="1312" alt="image" src="https://github.com/user-attachments/assets/087e027e-2569-4d03-926d-d2400a0ae04c">
 <img width="1312" alt="image" src="https://github.com/user-attachments/assets/12932a14-ea45-4540-b072-fed29ab8664d">
+<p>※フォントに関しましては環境のフォントを使用することになります。必ずヒラギノフォントが使えるわけではありません。</p>
 
 </div>
 
 ## 使用
 
 > [!WARNING]
-> 本ツールは Windows のみの実行となります。
+> 本リポジトリで公開しているものは Windows のみの実行となります。<br>オンライン版では日本語はないものの、MacユーザーやLinuxユーザーでもご利用できます。スマートフォンでのご利用はお勧めいたしません。
 
 オンライン版は[こちら](https://steve-xmh.github.io/amll-ttml-tool/)から利用可能です
 
