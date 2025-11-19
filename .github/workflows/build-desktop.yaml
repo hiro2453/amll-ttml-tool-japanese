@@ -1,13 +1,13 @@
-name: 构建 Tauri 桌面版本
+name: Tauriデスクトップ版を構築する
 on:
   - push
   - workflow_dispatch
 jobs:
   clean-pre-release:
-    name: 删除预发布版本的构建产物
+    name: プレリリース版のビルド成果物を削除する
     runs-on: ubuntu-22.04
     steps:
-      - name: 删除预发布版本的构建产物
+      - name: プレリリース版のビルド成果物を削除する
         uses: mknejp/delete-release-assets@v1
         with:
           token: ${{ github.token }}
@@ -17,7 +17,7 @@ jobs:
           fail-if-no-assets: false
           fail-if-no-release: false
   build-tauri-desktop:
-    name: 构建 Tauri 桌面版本
+    name: Tauriデスクトップ版を構築する
     needs: clean-pre-release
     strategy:
       fail-fast: false
@@ -29,38 +29,36 @@ jobs:
             arch: x86_64
     runs-on: ${{ matrix.platform }}
     steps:
-      - name: 克隆仓库
+      - name: リポジトリのクローン作成
         uses: actions/checkout@v4.2.0
-      - name: 缓存 Cargo 产物
+      - name: Cargo ビルド結果をキャッシュする
         uses: actions/cache@v4.2.3
         with:
           path: >
             ~/.cargo/bin/
-
             ~/.cargo/registry/index/
-
             ~/.cargo/registry/cache/
-
             ~/.cargo/git/db/
-
             target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-      - name: 安装 PNPM
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}-v3
+      - name: PNPMをインストール
         uses: pnpm/action-setup@v4.0.0
-      - name: 安装 Node.js
+      - name: Node.js をインストール
         uses: actions/setup-node@v4.0.4
         with:
           node-version: lts/*
           cache: pnpm
-      - name: 安装 Rust 工具链
+      - name: Rust ツールチェーンのインストール
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
-      - name: 安装 wasm32 目标
+      - name: wasm32 ターゲットのインストール
         run: rustup target add wasm32-unknown-unknown
-      - name: 安装前端依赖
+      - name: フロントエンド依存関係をインストールする
         run: pnpm i
-      - name: 构建 AMLL TTML Tools 程序并发布自动构建
+      - name: フロントエンド構築
+        run: pnpm build
+      - name: AMLL TTML Tools プログラムを構築し、自動ビルドを公開する
         uses: tauri-apps/tauri-action@v0.5.15
         with:
           tagName: ${{ github.ref_name }}-dev
@@ -81,7 +79,7 @@ jobs:
           args: ${{ matrix.args }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: 上传产物到 Action Artifact
+      - name: Action Artifactに成果物をアップロードする
         uses: actions/upload-artifact@v4.4.0
         with:
           name: AMLL TTML Tools ${{matrix.name}}-${{matrix.arch}}
