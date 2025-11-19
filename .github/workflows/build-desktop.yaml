@@ -31,16 +31,6 @@ jobs:
     steps:
       - name: リポジトリのクローン作成
         uses: actions/checkout@v4.2.0
-      - name: Cargo ビルド結果をキャッシュする
-        uses: actions/cache@v4.2.3
-        with:
-          path: >
-            ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}-v3
       - name: PNPMをインストール
         uses: pnpm/action-setup@v4.0.0
       - name: Node.js をインストール
@@ -54,10 +44,14 @@ jobs:
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
       - name: wasm32 ターゲットのインストール
         run: rustup target add wasm32-unknown-unknown
+      - name: なにこれ
+        run: cargo clean
       - name: フロントエンド依存関係をインストールする
-        run: pnpm i
+        run: pnpm install
       - name: フロントエンド構築
         run: pnpm build
+      - name: ビルド
+        run: cargo tauri build
       - name: AMLL TTML Tools プログラムを構築し、自動ビルドを公開する
         uses: tauri-apps/tauri-action@v0.5.15
         with:
