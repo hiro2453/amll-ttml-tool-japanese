@@ -40,6 +40,13 @@
 			"icons/128x128@2x.png",
 			"icons/icon.icns",
 			"icons/icon.ico"
-		]
+		],
+		"windows": {
+			"certificateThumbprint": null,
+			"digestAlgorithm": "sha256",
+			"wix": {
+				"upgradeCode": "11111111-2222-3333-4444-555555555555"
+			}
+		}
 	}
 }
