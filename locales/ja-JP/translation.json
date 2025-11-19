@@ -12,8 +12,8 @@
 			"warning": "This refactored version is still under development. Please keep backups of your project to avoid accidents!"
 		},
 		"empty": {
-			"title": "No lyric lines",
-			"description": "Add new lyric lines in the top panel or open/import existing lyrics from the menu"
+			"title": "歌詞がありません",
+			"description": "上部パネルから新しい歌詞行を追加するか、メニューから既存の歌詞を 開く もしくは インポート してください"
 		}
 	},
 	"historyRestoreDialog": {
@@ -68,32 +68,32 @@
 	},
 	"settings": {
 		"common": {
-			"language": "Interface Language",
-			"languageDesc": "Select the language for the interface",
-			"layoutMode": "Editor Layout Mode",
+			"language": "言語",
+			"languageDesc": "インターフェイスの言語を選択できます",
+			"layoutMode": "エディターレイアウト",
 			"layoutModeDesc": {
-				"line1": "Simple layout satisfies most basic needs",
-				"line2": "Switch to Advanced Mode if you need more efficient syncing"
+				"line1": "シンプルなレイアウトは大抵のニーズが満足します",
+				"line2": "より効率的な同期が必要な場合は、上級者モードに切り替えてください"
 			},
 			"layoutModeOptions": {
-				"simple": "Simple Mode",
-				"advance": "Advanced Mode"
+				"simple": "シンプルモード",
+				"advance": "上級者モード"
 			},
-			"syncJudgeMode": "Sync Timestamp Judgment Mode",
-			"syncJudgeModeDesc": "Set how timestamps are judged when syncing. Default is 'First key down'.",
+			"syncJudgeMode": "同期タイムスタンプ判定モード",
+			"syncJudgeModeDesc": "同期時にタイムスタンプをどのように判定するかを設定します。デフォルトは「キーが押されたとき」です。",
 			"syncJudgeModeOptions": {
-				"firstKeyDown": "First key down time",
-				"firstKeyDownLegacy": "First key down time (legacy)",
-				"lastKeyUp": "Last key up time",
-				"middleKey": "Middle of key down & up"
+				"firstKeyDown": "キーが押されたとき",
+				"firstKeyDownLegacy": "キーが押されたとき (legacy)",
+				"lastKeyUp": "キーが離されたとき",
+				"middleKey": "キーを押した状態と離した状態の中間"
 			},
+			"volume": "音楽の音量",
+			"playbackRate": "再生速度",
 			"autosave": {
-				"enable": "启用自动保存",
-				"interval": "保存间隔 (分钟)",
-				"limit": "保留快照数量"
-			},
-			"volume": "Music Volume",
-			"playbackRate": "Playback Speed"
+				"enable": "自動保存",
+				"interval": "間隔 (分)",
+				"limit": "保管するファイル数"
+			}
 		},
 		"spectrogram": {
 			"palette": "Color Palette",
@@ -106,19 +106,19 @@
 		}
 	},
 	"audioPanel": {
-		"volume": "Volume",
-		"gain": "Spectrum Gain",
-		"playbackRate": "Playback rate",
-		"clickToLoadMusic": "Click the icon button to load music",
-		"playPause": "Play / pause music",
-		"expandSpectrogram": "Expand / collapse spectrogram",
-		"waitForSpectrogram": "Waiting for spectrogram to load…"
+		"volume": "音量",
+		"gain": "スペクトラムゲイン",
+		"playbackRate": "再生速度",
+		"clickToLoadMusic": "アイコンをクリックすると音声ファイルを選択できます",
+		"playPause": "再生 / 一時停止",
+		"expandSpectrogram": "スペクトラムを 表示/非表示",
+		"waitForSpectrogram": "スペクトラムを読み込んでいます…"
 	},
 	"settingsDialog": {
 		"title": "環境設定",
 		"tab": {
 			"common": "一般",
-			"keybindings": "キーバインド",
+			"keybindings": "ホットキー",
 			"experimental": "実験的",
 			"spectrogram": "スペクトログラム"
 		},
@@ -221,26 +221,26 @@
 			"submit": "Lyrics Submit/Correction"
 		},
 		"issueTitle": "[Lyrics Submit/Fix] {name}",
-		"unknownTitle": "Unknown Title",
-		"unknownArtist": "Unknown Artist",
-		"description": "Submit lyrics to AMLL Lyrics Database",
-		"title": "Submit lyrics to AMLL Lyrics Database (Simplified Chinese users only)",
-		"chineseOnlyWarning": "This feature is only available to Simplified Chinese users of AMLL Lyrics Database. If you are editing lyrics to use them in other software, please follow that software's way to submit lyrics!",
-		"thankYou": "First of all, thank you for your generous lyrics contribution!",
-		"cc0Agreement": "By submitting you agree to",
-		"cc0Rights": "use the CC0 license and fully waive ownership of the lyrics",
-		"andSubmit": "and submit to the lyrics database!",
-		"futureUse": "And the lyrics will be used as default TTML source by AMLL systems in the future!",
-		"rightsWarning": "If you value retaining ownership, please do NOT submit!",
-		"submitInstructions": "Enter the following info then jump to the GitHub issue submission page!",
-		"closeWarning": "关闭上述警告信息"
+		"unknownTitle": "不明なタイトル",
+		"unknownArtist": "不明なアーティスト",
+		"description": "AMLL歌詞データベースに歌詞を投稿する",
+		"title": "AMLL歌詞データベースに歌詞を投稿する (中国ユーザーのみ)",
+		"chineseOnlyWarning": "この機能はAMLL歌詞データベースの簡体字中国語ユーザーのみが利用可能です。他のソフトウェアで使用するために歌詞を編集する場合は、そのソフトウェアの歌詞提出方法に従ってください",
+		"thankYou": "まず最初に、ご厚意による歌詞の提供をありがとうございます！",
+		"cc0Agreement": "送信することにより、あなたは以下に同意するものとします",
+		"cc0Rights": "CC0ライセンスを使用し、歌詞の所有権を完全に放棄する",
+		"andSubmit": "そして歌詞データベースに提出してください！",
+		"futureUse": "そして歌詞は今後、AMLLシステムにおけるデフォルトのTTMLソースとして使用されます",
+		"rightsWarning": "所有権の保持を重視される場合は、絶対に提出しないでください！",
+		"submitInstructions": "以下の情報を入力し、GitHubの課題提出ページへ移動してください",
+		"closeWarning": "上記の警告メッセージを閉じる"
 	},
 	"lyricLineView": {
 		"translatedLabel": "翻訳:",
 		"romanLabel": "ローマ字:",
 		"empty": "未設定",
-		"insertWord": "ここに単語を入力",
-		"insertLine": "Insert new line here"
+		"insertWord": "ここに歌詞を入力",
+		"insertLine": "改行を挿入"
 	},
 	"lyricWordView": {
 		"empty": "Empty",
@@ -259,49 +259,49 @@
 			"bgLyric": "後ろの歌詞",
 			"duetLyric": "対称歌詞",
 			"ignoreSync": "同期を無視する",
-			"wordTiming": "词时间戳",
-			"emptyBeatCount": "空拍数量",
-			"wordProperties": "单词属性",
-			"wordContent": "单词内容",
-			"obscene": "不雅用语",
-			"secondaryContent": "次要内容",
-			"translatedLyric": "翻译歌词",
-			"romanLyric": "音译歌词",
-			"layoutMode": "布局模式",
-			"syllableDisplayMode": "音节显示模式",
-			"lineMode": "逐行模式",
-			"syllableMode": "逐字模式",
-			"showAllSyllables": "显示所有音节",
+			"wordTiming": "単語タイムスタンプ",
+			"emptyBeatCount": "拍数量",
+			"wordProperties": "単語属性",
+			"wordContent": "内容",
+			"obscene": "不適切な言葉",
+			"secondaryContent": "追加事項",
+			"translatedLyric": "翻訳歌詞",
+			"romanLyric": "音訳歌詞",
+			"layoutMode": "レイアウトパターン",
+			"syllableDisplayMode": "スペクトラム",
+			"lineMode": "行モード",
+			"syllableMode": "逐字モード",
+			"showAllSyllables": "すべての音節を表示する",
 			"layoutModeOptions": {
 				"simple": "简单模式",
 				"advance": "高级模式"
 			}
 		},
 		"previewMode": {
-			"lyrics": "歌词",
-			"showTranslation": "显示翻译",
-			"showRoman": "显示音译",
-			"word": "单词",
-			"fadeWidth": "过渡宽度"
+			"lyrics": "歌詞",
+			"showTranslation": "翻訳表示",
+			"showRoman": "ルビ表示",
+			"word": "単語",
+			"fadeWidth": "移行幅"
 		},
 		"syncMode": {
-			"currentEmptyBeat": "Empty Beat",
-			"syncAdjustment": "Timing Adjustment",
-			"timeOffset": "Time Offset",
-			"assistSettings": "Assistant Settings",
-			"showTimestampUpdate": "Show Timestamp Updates",
-			"touchSyncPanel": "Touch Sync Panel",
-			"keyBindingReference": "Hotkey Cheatsheet",
-			"startSync": "Mark Begin",
-			"continuousSync": "Commit",
-			"endSync": "Mark End"
+			"currentEmptyBeat": "空拍",
+			"syncAdjustment": "タイミング調整",
+			"timeOffset": "オフセット",
+			"assistSettings": "アシスタント設定",
+			"showTimestampUpdate": "タイムスタンプの更新を表示",
+			"touchSyncPanel": "タッチパネルを表示",
+			"keyBindingReference": "ホットキー 一覧",
+			"startSync": "マーク開始",
+			"continuousSync": "コミット",
+			"endSync": "マーク終了"
 		}
 	},
 	"topBar": {
 		"modeBtns": {
-			"edit": "编辑",
-			"sync": "打轴",
-			"preview": "预览"
+			"edit": "編集",
+			"sync": "タイミング",
+			"preview": "プレビュー"
 		},
 		"appName": "Apple Music-like Lyrics TTML Tool",
 		"menu": {
@@ -359,66 +359,66 @@
 	},
 	"confirmDialog": {
 		"newFile": {
-			"title": "Confirm 新規作成",
-			"description": "You have unsaved changes. If you proceed, these changes will be lost. Are you sure you want to create a 新規作成?"
+			"title": "新規作成しますか？",
+			"description": "未保存の変更があります。保存しないと変更は失われますが、よろしいですか？"
 		},
 		"openFile": {
-			"title": "Confirm Open File",
-			"description": "You have unsaved changes. If you proceed, these changes will be lost. Are you sure you want to open a 新規作成?"
+			"title": "ファイルを開きますか？",
+			"description": "未保存の変更があります。保存しないと変更は失われますが、よろしいですか？"
 		},
 		"openFromClipboard": {
-			"title": "Confirm Open from Clipboard",
-			"description": "You have unsaved changes. If you proceed, these changes will be lost. Are you sure you want to open from the clipboard?"
+			"title": "クリップボードから開きますか？",
+			"description": "未保存の変更があります。保存しないと変更は失われますが、よろしいですか？"
 		},
 		"importFile": {
-			"title": "Confirm Import Lyrics",
-			"description": "You have unsaved changes. If you proceed, these changes will be lost. Are you sure you want to import new lyrics?"
+			"title": "インポートしますか？",
+			"description": "未保存の変更があります。保存しないと変更は失われますが、よろしいですか？"
 		},
-		"confirm": "Confirm",
-		"cancel": "Cancel"
+		"confirm": "実行",
+		"cancel": "キャンセル"
 	},
 	"advancedSegmentDialog": {
-		"title": "Advanced Segmentation",
+		"title": "上級者向け単語区分",
 		"scope": {
-			"title": "Application Scope",
-			"all": "All lyric lines",
+			"title": "適用範囲",
+			"all": "すべての歌詞の行",
 			"range": {
-				"from": "From line",
-				"to": "to line",
-				"end": ""
+				"from": "",
+				"to": "行から",
+				"end": "行まで"
 			}
 		},
 		"rules": {
-			"title": "Auto Segmentation Rules",
-			"cjk": "Split CJK characters",
-			"english": "Split English words by syllable"
+			"title": "自動区分ルール",
+			"cjk": "CJK文字を分割する",
+			"english": "英語の単語を音節で分割する"
 		},
-		"tip": "After splitting, the original word's total duration will be redistributed based on the number of characters and their weights.",
+		"tip": "分割後、元の単語の総持続時間は、文字数とその重みに基づいて再配分されます。",
 		"postProcess": {
-			"title": "Post-processing",
+			"title": "後処理",
 			"punct": {
-				"caption": "Punctuation handling:",
-				"merge": "Merge to previous segment",
-				"standalone": "Set as standalone segment",
-				"weight": "Punctuation time weight:"
+				"caption": "句読点の処理:",
+				"merge": "前のセグメントにマージ",
+				"standalone": "スタンドアロンセグメントとして設定",
+				"weight": "句読点時間の重み:"
 			},
-			"empty": "Remove empty segments"
+			"empty": "空のセグメントを削除する"
 		},
 		"custom": {
-			"title": "Custom Segmentation Rules",
-			"input": "Enter word for manual splitting...",
-			"add": "Add to custom rules",
-			"list": "Custom rules list:"
+			"title": "カスタム区分ルール",
+			"input": "分割用の単語を入力してください",
+			"add": "ルールを追加",
+			"list": "カスタムルール一覧:"
 		},
 		"ignore": {
-			"title": "Ignore List",
-			"placeholder": "One word per line, words in this list will not be auto-segmented"
+			"title": "無視リスト",
+			"placeholder": "1行に1語、このリスト内の単語は自動分割されません"
 		},
 		"test": {
-			"title": "Splitting Test",
-			"input": "Enter a lyric line or word to test...",
-			"output": "Preview result:",
-			"outputError": "Splitting preview error"
+			"title": "分割試験",
+			"input": "テストする歌詞の行または単語を入力してください...",
+			"output": "プレビュー結果:",
+			"outputError": "分割プレビューエラー"
 		}
 	},
 	"contextMenu": {
@@ -442,7 +442,7 @@
 	},
 	"pwa": {
 		"offlineReady": "Site successfully cached for offline use",
-		"updateRefresh": "Site updated, refresh to use the latest version!",
-		"refresh": "Refresh"
+		"updateRefresh": "サイトが更新されました。最新バージョンにするにはページを更新してください",
+		"refresh": "更新する"
 	}
 }
