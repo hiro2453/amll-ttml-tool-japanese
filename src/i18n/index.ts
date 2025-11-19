@@ -29,7 +29,7 @@ i18n
 	.init({
 		resources,
 		debug: import.meta.env.DEV,
-		fallbackLng: "zh-CN",
+		fallbackLng: "ja-JP",
 		interpolation: {
 			escapeValue: false, // react already safes from xss
 		},

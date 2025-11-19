@@ -9,7 +9,7 @@
 			"details": "Approximate error info:"
 		},
 		"wip": {
-			"warning": "This refactored version is still under development. Please keep backups of your project to avoid accidents!"
+			"warning": "まだ開発段階です。予期せぬ事故を防ぐため、プロジェクトのバックアップを必ず取っておいてください"
 		},
 		"empty": {
 			"title": "歌詞がありません",
